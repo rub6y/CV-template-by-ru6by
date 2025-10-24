@@ -1,0 +1,11 @@
+*.log
+*.aux
+*.fdb_latexmk
+*.fls
+*.synctex.gz
+
+/templates
+/images
+
+mytemp.tex
+mytemp.pdf

@@ -1,0 +1,79 @@
+\usepackage{extsizes}
+\usepackage[a4paper, margin=1.5cm]{geometry}
+\usepackage{graphicx}
+\usepackage{array} % for vertical centering in tabular
+
+\usepackage[utf8]{inputenc}   % allows UTF-8 input (for Polish characters)
+\usepackage[T1]{fontenc}      % use T1 font encoding for proper diacritics
+\usepackage[polish]{babel}    % Polish hyphenation and language settings
+
+\usepackage{xcolor} % ensure you have this
+\definecolor{mygrey}{gray}{0.85} % define your custom grey color
+
+\usepackage{tabularx}
+
+\newcommand{\cvtitle}[7]{
+    \noindent
+    \begin{tabular}{@{} m{0.10\textwidth} m{0.55\textwidth} m{0.25\textwidth} @{}}
+        % --- Logo --- 
+        \includegraphics[width=\linewidth]{#1} &
+        % --- Name ---
+        \vspace{-0.5em}
+        \begin{minipage}[c]{\linewidth}
+            {\fontsize{25pt}{25pt}\selectfont \textsc{#2}} \\
+            {\small #3}\\[-2pt]
+            {\small #4}
+        \end{minipage} &
+        % --- Contact info (aligned to top-right) ---
+        \raggedleft
+        \vspace{0.75em}
+        \small
+        #5 $\diamond$\\
+        #6 $\diamond$\\
+        #7 $\diamond$
+    \end{tabular}
+
+    \vspace{4pt}
+    \noindent\rule{\textwidth}{0.4pt}
+}
+
+\newcommand{\cvsection}[1]{%
+  \vspace{1.5em}% space before
+  \noindent\textbf{\large $\diamond$ \textsc{#1}}\par
+  \vspace{-0.5em}% space after
+  \noindent\rule{\textwidth}{0.4pt}\vspace{0.6em}%
+}
+
+\newcommand{\cventry}[4]{%
+  \noindent
+  \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} l r @{}}
+    \textbf{#1} & #2 \\[2pt]
+    \textit{#3} & \textit{#4} \\
+  \end{tabular*}\vspace{0.5em}
+}
+
+\newcommand{\cvtable}[6]{%
+    \vspace{0.5em}
+    \noindent
+    \begin{tabularx}{\textwidth}{@{} X X X @{}}
+        \textbf{#1} &
+        \textbf{#3} &
+        \textbf{#5} \\[2pt]
+
+        \textit{#2} &
+        \textit{#4} &
+        \textit{#6} \\
+    \end{tabularx}
+}
+
+\newcommand{\cvsubsection}[1]{%
+  \noindent
+  \makebox[\textwidth]{%
+    \colorbox{mygrey}{%
+      \begin{minipage}{0.98\textwidth}
+        \centering\textbf{#1 \vphantom{p\^{E}}}
+      \end{minipage}%
+    }%
+  }%
+  \par\vspace{0.4em}
+}

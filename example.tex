@@ -1,0 +1,40 @@
+\documentclass[a4paper, 10pt]{article}
+
+\input{header.tex}
+
+\begin{document}
+    
+    \cvtitle
+    {images/KNMT.jpg} % Obrazek Obok imienia i nazwiska
+    {Jan Kowalski} % Imię i nazwisko
+    {Wydział Matematyki i Informatyki,}{Uniwersytet Wrocławski} % Nazwa wydziału i uniwerku
+    {(+48) 111-222-333}{imejl@gmail.com}{https://github.com/} % Jakieś dane
+
+
+    \cvsection{Jakaś sekcja} % Tak można rozpoczynać rożne ogólne sekcje CV
+
+        \cvsubsection{\textbf{Jakaś podsekcja}} % Tak podsekcje w szarym prostokącie 
+        
+            \cventry % komenda 4 argumentu do tworzenia prostyuch entries
+            {Wyróżniony Tekst}{Linijka po prawej}                                         
+            {Pod teskt}{Następna linijka po prawej}                       
+
+            \cventry % przykład użycia 
+            {Wydział Matematyki i Informatyki, Uniwersytet Wrocławski}{Wrocław, Polska}  
+            {Kierunek: Matematyka I stopień, tytuł: licencjat}{2022 - 2025}
+
+        \cvsubsection{\textbf{Inna podsekcja}}
+
+            \cvtable % komenda 6 argumentów do tabelki 2 x 3
+            {Wyróżniony tekst I}{komentarz}
+            {Wyróżniony tekst II}{komentarz}
+            {Wyróżniony tekst III}{komentarz}
+
+        \cvsubsection{\textbf{Przykład}}
+
+            \cvtable
+            {Topologia Algebraiczna II}{Ocena: wykł. 5, ćw. 5}
+            {Logika R}{Ocena: (w trakcie)}
+            {Logika III R}{(nie istnieje)}
+
+\end{document}
