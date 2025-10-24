@@ -16,21 +16,21 @@
     \noindent
     \begin{tabular}{@{} m{0.10\textwidth} m{0.55\textwidth} m{0.25\textwidth} @{}}
         % --- Logo --- 
-        \includegraphics[width=\linewidth]{#1} &
+        \raisebox{-0.5\height}{\includegraphics[width=\linewidth]{#1}} &
         % --- Name ---
-        \vspace{-0.5em}
-        \begin{minipage}[c]{\linewidth}
+        \begin{minipage}[t]{\linewidth}
             {\fontsize{25pt}{25pt}\selectfont \textsc{#2}} \\
             {\small #3}\\[-2pt]
             {\small #4}
         \end{minipage} &
         % --- Contact info (aligned to top-right) ---
-        \raggedleft
-        \vspace{0.75em}
-        \small
-        #5 $\diamond$\\
-        #6 $\diamond$\\
-        #7 $\diamond$
+        \begin{minipage}[t]{0.3\textwidth}
+            \raggedleft
+            \small
+            #5 $\diamond$\\
+            #6 $\diamond$\\
+            #7 $\diamond$
+        \end{minipage}
     \end{tabular}
 
     \vspace{4pt}
